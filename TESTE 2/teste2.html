@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>TESTE 2</title>
+        <script>
+            function FFibonacci(vlr)
+            {
+                const Ff = [];
+                Ff[0] = 0;
+                Ff[1] = 1;
+
+                for(let i=2;i!=null;i++)
+                {
+                    Ff[i] = Ff[i-2]+Ff[i-1];
+
+                    if(vlr==Ff[i])
+                    {
+                        alert(vlr + " PERTENCE A SEQUENCIA")
+                        return;
+                    }
+                    if(Ff[i]>vlr)
+                    {
+                        alert(vlr + " NAO PERTENCE A SEQUENCIA")
+                        return;
+                    }
+                }
+
+            }
+
+            function testeff()
+            {
+                let valor = document.getElementById('valor').value;
+
+                FFibonacci(valor);
+            }
+        </script>
+    </head>
+    <body>
+        <p>
+            <label for="fn">Insira seu valor: </label>
+            <input name="fn" id="valor" type="text" />
+            <button onclick= "testeff()" >calcular</button>
+        </p>
+    </body>
+</html>
